@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure the body takes up full height */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
@@ -12,22 +16,22 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: center;
-    background: url('background.webp') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
+/* Make header stick to the top */
 header {
     background-color: rgba(255, 156, 0, 0.8); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-.logo {
-    max-width: 200px;
-    animation: fadeIn 2s ease-in-out;
-}
-
+/* Main content should grow to fill available space */
 main {
     flex: 1;
     display: flex;
@@ -38,24 +42,16 @@ main {
     background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 10px; /* Optional margin for better spacing */
 }
 
-h1 {
-    color: #ffcf00;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    animation: slideIn 1s ease-out;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
+/* Make footer stick to the bottom */
 footer {
     background-color: rgba(255, 156, 0, 0.8); /* Semi-transparent background */
     padding: 10px;
     border-radius: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 footer p {
