@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 150px;
     animation: fadeIn 2s ease-in-out;
 }
 
