@@ -6,8 +6,8 @@
 }
 
 html, body {
-    height: 100%; /* Ensure the body takes up full height */
-    overflow: hidden; /* Prevent scrollbars caused by background movement */
+    height: 100%; /* Garantir que o body ocupe toda a altura */
+    overflow: hidden; /* Evitar barras de rolagem causadas pelo movimento do fundo */
 }
 
 body {
@@ -18,17 +18,17 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: url('background.webp') no-repeat center center fixed;
-    background-size: cover; /* Ensure the background covers the entire body */
-    background-position: center center; /* Initial position */
+    background-size: cover; /* Garantir que o fundo cubra todo o body */
+    background-position: center center; /* Posição inicial do fundo */
 }
 
 /* Header styling */
 header {
-    background-color: rgba(255, 156, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 156, 0, 0.8); /* Fundo semi-transparente */
     padding: 20px;
     border-radius: 8px;
     width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000; /* Garantir que fique acima dos outros elementos */
 }
 
 .logo {
@@ -44,15 +44,15 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 0 10px; /* Optional margin for better spacing */
+    margin: 0 10px; /* Margem opcional para melhor espaçamento */
 }
 
 /* Footer styling */
 footer {
-    background-color: rgba(255, 156, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 156, 0, 0.8); /* Fundo semi-transparente */
     padding: 10px;
     border-radius: 8px;
     width: 100%;
@@ -82,5 +82,33 @@ footer p {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Ajustes específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Ajuste para rolar com o conteúdo em vez de fixar */
+        background-position: center top; /* Centralizar a imagem no topo */
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 5px; /* Reduzir margem para dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 120px; /* Reduzir o tamanho da logo em dispositivos muito pequenos */
+    }
+
+    main {
+        padding: 10px;
+        margin: 0; /* Remover margem em dispositivos muito pequenos */
+    }
+
+    footer {
+        padding: 5px; /* Reduzir o padding no rodapé para dispositivos muito pequenos */
     }
 }
