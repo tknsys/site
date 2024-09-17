@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tukano Systems - Página em Construção</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const background = document.querySelector('body');
+
+            // Atualizar o fundo com base na inclinação do celular
+            function updateBackground(event) {
+                const alpha = event.alpha || 0; // Z
+                const beta = event.beta || 0;   // X
+                const gamma = event.gamma || 0; // Y
+
+                // Ajusta o movimento
+                const x = Math.min(Math.max(beta / 20, -100), 100);
+                const y = Math.min(Math.max(gamma / 20, -100), 100);
+
+                background.style.backgroundPosition = `${x}px ${y}px`;
+            }
+
+            // Verifica se o navegador suporta a API de orientação
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', updateBackground);
+            } else {
+                // Em caso negativo, define a posição padrão
+                background.style.backgroundPosition = 'center center';
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
