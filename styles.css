@@ -17,9 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0; /* Remover margem padrão */
     background: url('background.webp') no-repeat center center;
-    background-size: auto 100%; /* Ajusta a largura automaticamente para manter a altura completa */
-    background-attachment: local; /* Permite rolar horizontalmente */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto o conteúdo rola */
 }
 
 /* Header styling */
@@ -88,8 +89,8 @@ footer p {
 /* Ajustes específicos para dispositivos móveis */
 @media (max-width: 768px) {
     body {
-        background-size: auto 100%; /* Manter ajuste de tamanho do fundo */
-        background-position: center top; /* Manter posição de fundo */
+        background-size: cover; /* Manter ajuste de tamanho do fundo */
+        background-position: center center; /* Centralizar a imagem */
     }
 
     main {
