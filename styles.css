@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%; /* Garantir que o body ocupe toda a altura */
-    overflow: hidden; /* Evitar barras de rolagem causadas pelo movimento do fundo */
+    overflow: hidden; /* Evitar barras de rolagem */
 }
 
 body {
@@ -19,8 +19,8 @@ body {
     min-height: 100vh;
     margin: 0; /* Remover margem padrão */
     background: url('background.webp') no-repeat center center;
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-attachment: fixed; /* Mantém a imagem fixa enquanto o conteúdo rola */
+    background-size: cover; /* Garantir que a imagem cubra toda a área */
+    background-attachment: fixed; /* A imagem de fundo fica fixa enquanto o conteúdo rola */
     background-position: center center; /* Centralizar a imagem */
 }
 
