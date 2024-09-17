@@ -7,6 +7,7 @@
 
 html, body {
     height: 100%; /* Ensure the body takes up full height */
+    overflow: hidden; /* Prevent scrollbars caused by background movement */
 }
 
 body {
@@ -17,8 +18,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: url('background.webp') no-repeat center center fixed;
-    background-size: cover;
-    background-position: center center; /* Inicialmente centraliza o fundo */
+    background-size: cover; /* Ensure the background covers the entire body */
+    background-position: center center; /* Initial position */
 }
 
 /* Header styling */
