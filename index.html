@@ -10,20 +10,18 @@
             const background = document.querySelector('body');
 
             function updateBackground(event) {
-                const alpha = event.alpha || 0;
                 const beta = event.beta || 0;
                 const gamma = event.gamma || 0;
 
-                const x = Math.min(Math.max(beta * 1.5, -200), 200); 
-                const y = Math.min(Math.max(gamma * 1.5, -200), 200);
+                // Ajusta a quantidade de movimento para uma faixa mais ampla
+                const x = Math.min(Math.max(gamma * 2, -200), 200); // Ajuste a multiplicação para mais movimento
+                const y = 0; // Não movimentar verticalmente
 
-                background.style.backgroundPosition = `${x}px ${y}px`;
+                background.style.backgroundPosition = `${50 + x}px ${50 + y}px`;
             }
 
             if (window.DeviceOrientationEvent) {
                 window.addEventListener('deviceorientation', updateBackground);
-            } else {
-                background.style.backgroundPosition = 'center center';
             }
         });
     </script>
@@ -34,7 +32,7 @@
     </header>
     <main>
         <h1>Página em Construção</h1>
-        <p>Estamos trabalhando para trazer algo incrível pra você. Volte em breve!</p>
+        <p>Estamos trabalhando para trazer algo incrível para você. Volte em breve!</p>
     </main>
     <footer>
         <p>2024 Tukano Systems</p>
