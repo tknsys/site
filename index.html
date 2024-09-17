@@ -9,24 +9,20 @@
         document.addEventListener('DOMContentLoaded', () => {
             const background = document.querySelector('body');
 
-            // Atualizar o fundo com base na inclinação do celular
             function updateBackground(event) {
-                const alpha = event.alpha || 0; // Z
-                const beta = event.beta || 0;   // X
-                const gamma = event.gamma || 0; // Y
+                const alpha = event.alpha || 0;
+                const beta = event.beta || 0;
+                const gamma = event.gamma || 0;
 
-                // Ajusta o movimento
-                const x = Math.min(Math.max(beta / 20, -100), 100);
-                const y = Math.min(Math.max(gamma / 20, -100), 100);
+                const x = Math.min(Math.max(beta * 1.5, -200), 200); 
+                const y = Math.min(Math.max(gamma * 1.5, -200), 200);
 
                 background.style.backgroundPosition = `${x}px ${y}px`;
             }
 
-            // Verifica se o navegador suporta a API de orientação
             if (window.DeviceOrientationEvent) {
                 window.addEventListener('deviceorientation', updateBackground);
             } else {
-                // Em caso negativo, define a posição padrão
                 background.style.backgroundPosition = 'center center';
             }
         });
@@ -38,7 +34,7 @@
     </header>
     <main>
         <h1>Página em Construção</h1>
-        <p>Estamos trabalhando para trazer algo incrível para você. Volte em breve!</p>
+        <p>Estamos trabalhando para trazer algo incrível pra você. Volte em breve!</p>
     </main>
     <footer>
         <p>2024 Tukano Systems</p>
