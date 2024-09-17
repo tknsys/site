@@ -21,6 +21,7 @@ body {
     background: url('background.webp') no-repeat center center;
     background-size: cover; /* Ajusta a imagem para cobrir toda a área */
     background-attachment: fixed; /* Mantém a imagem fixa enquanto o conteúdo rola */
+    background-position: center center; /* Centralizar a imagem */
 }
 
 /* Header styling */
@@ -49,6 +50,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin: 0 10px; /* Margem opcional para melhor espaçamento */
+    z-index: 1; /* Garantir que o conteúdo fique acima do fundo */
 }
 
 /* Footer styling */
@@ -58,6 +60,7 @@ footer {
     border-radius: 8px;
     width: 100%;
     text-align: center;
+    z-index: 1; /* Garantir que o rodapé fique acima do fundo */
 }
 
 footer p {
@@ -89,7 +92,7 @@ footer p {
 /* Ajustes específicos para dispositivos móveis */
 @media (max-width: 768px) {
     body {
-        background-size: cover; /* Manter ajuste de tamanho do fundo */
+        background-size: cover; /* Garantir que o fundo cubra toda a tela */
         background-position: center center; /* Centralizar a imagem */
     }
 
