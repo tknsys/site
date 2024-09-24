@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Enviando dados para o endpoint
-            const response = await fetch('https://endpointteste.com', {
+            const response = await fetch('https://hook.us2.make.com/nk91o3o7hup4aov99rcyi4k9zi1hj4ba', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
