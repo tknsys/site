@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tukano Systems - Página em Construção</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const background = document.querySelector('body');
+
+            function updateBackground(event) {
+                const beta = event.beta || 0;
+                const gamma = event.gamma || 0;
+                const x = (gamma / 90) * 50;
+                background.style.backgroundPosition = `${50 + x}% center`;
+            }
+
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', updateBackground);
+            }
+
+            // Navegação entre seções
+            const links = document.querySelectorAll('nav a');
+            const contentSections = document.querySelectorAll('.content');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    contentSections.forEach(section => section.classList.remove('active'));
+                    target.classList.add('active');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="tukano.png" alt="Logo Tukano Systems" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#manuais">Central de Manuais</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#redes-sociais">Redes Sociais</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <section id="blog" class="content active">
+                <h1>Blog (em construção)</h1>
+                <ul>
+                    <li>Artigos</li>
+                    <li>Notícias</li>
+                    <li>Tutoriais/Cursos</li>
+                </ul>
+            </section>
+            <section id="manuais" class="content">
+                <h1>Central de Manuais (em construção)</h1>
+            </section>
+            <section id="contato" class="content">
+                <h1>Contato</h1>
+                <form>
+                    <input type="text" placeholder="Nome" required>
+                    <input type="text" placeholder="Empresa" required>
+                    <input type="tel" placeholder="Celular" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            <section id="redes-sociais" class="content">
+                <h1>Redes Sociais</h1>
+                <ul>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>2024 Tukano Systems</p>
+    </footer>
+</body>
+</html>
