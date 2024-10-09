@@ -68,3 +68,6 @@ theme_mode: # [light | dark]
 
 # Avatar on sidebar
 #avatar: "/c
+
+# URL do blog
+baseurl: "/blog"
