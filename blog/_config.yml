@@ -20,7 +20,7 @@ avatar: "https://tukano.net/tukano.png" # ajuste o caminho conforme necessário
 # Fill in the protocol & hostname for your site.
 url: "https://tknsys.github.io"
 # URL do blog
-baseurl: "https://tknsys.github.io/blog"
+baseurl: "/blog"
 
 github:
   username: tknsys # change to your GitHub username
