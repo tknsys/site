@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2"  # ou a versão que você preferir
+gem "jekyll", "~> 4.2"
 gem "jekyll-theme-chirpy"
-gem "jekyll-feed"  # se precisar de suporte para feeds
+gem "jekyll-feed"
 gem "html-proofer", "~> 4.3.0"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
@@ -12,4 +10,4 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw]
+gem "wdm", "~> 0.1.1", platforms: [:mingw, :x64_mingw]
