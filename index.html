@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tukano Systems - Página em Construção</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const background = document.querySelector('body');
-
-            function updateBackground(event) {
-                const beta = event.beta || 0;
-                const gamma = event.gamma || 0;
-
-                const x = (gamma / 90) * 50;
-                
-                background.style.backgroundPosition = `${50 + x}% center`;
-            }
-
-            if (window.DeviceOrientationEvent) {
-                window.addEventListener('deviceorientation', updateBackground);
-            }
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <img src="tukano.png" alt="Logo Tukano Industrial" class="logo">
-    </header>
-    <div class="container">
-        <main>
-            <h1>Página em Construção</h1>
-            <p>Estamos trabalhando para trazer algo incrível pra você. Volte em breve!</p>
-        </main>
-    </div>
-    <footer>
-        <p>2024 Tukano Industrial</p>
-    </footer>
-</body>
-</html>
+---
+layout: home
+# Index page
+---
